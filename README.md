@@ -31,12 +31,6 @@ conda activate wpgen
 ### 3. Install Dependencies
 Create a `requirements.txt` file and install the necessary Python packages:
 ```bash
-# Create the requirements.txt file
-echo "numpy
-matplotlib
-opencv-python
-PyYAML
-scipy" > requirements.txt
 
 # Install all required packages
 pip install -r requirements.txt
