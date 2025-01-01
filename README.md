@@ -31,6 +31,12 @@ conda activate wpgen
 ### 3. Install Dependencies
 Create a `requirements.txt` file and install the necessary Python packages:
 ```bash
+# Create the requirements.txt file
+echo "numpy
+matplotlib
+opencv-python
+PyYAML
+scipy" > requirements.txt
 
 # Install all required packages
 pip install -r requirements.txt
@@ -40,12 +46,34 @@ pip install -r requirements.txt
 
 ## Usage
 
-To run the script, use the following command:
+### Prepare Map Files
+Before running the script, ensure the following:
+1. **SLAM Toolbox Outputs**: Place the SLAM-generated map image and its corresponding `.yaml` file in the `map` folder.
+   - Example:
+     ```
+     ./map/ict_3rd_floor.png
+     ./map/ict_3rd_floor.yaml
+     ```
+
+### Run the Script
+To start the waypoint generation process, use the following command:
 ```bash
 python3 wpgen_manual.py ./map/ict_3rd_floor.png
 ```
 
-Replace `./map/ict_3rd_floor.png` with the path to your map image.
+---
+
+## How to Generate Waypoints
+
+1. **Load the Map Image**:
+   After running the script, the map image will open.
+
+2. **Mark Waypoints**:
+   Click on the map to mark waypoints along the desired path. 
+   - **Tip**: Place the points closely together for smoother waypoints.
+
+3. **Generate Waypoints**:
+   Once you've finished marking the waypoints, press the **"r"** key to generate the final waypoints.
 
 ---
 
