@@ -29,7 +29,10 @@ conda activate wpgen
 ```
 
 ### 3. Install Dependencies
+Create a `requirements.txt` file and install the necessary Python packages:
+```bash
 
+# Install all required packages
 pip install -r requirements.txt
 ```
 
